@@ -70,7 +70,6 @@ function cssm() {
         text-align: center;
         margin-left: -24px;
         padding-left: 30px;
-        width: 590px;
     }
     .addressfield .button-toolbar button:not(.button-popup) {
         display: none;
