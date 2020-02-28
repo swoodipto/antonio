@@ -9,6 +9,7 @@ function cssm() {
     .toolbar.toolbar-addressbar {
         display: flex;
         order: -2 !important;
+        -webkit-app-region: drag;
     }
     .toolbar.toolbar-insideinput {
         position: absolute;
@@ -41,7 +42,12 @@ function cssm() {
         width: 100%;
         display: flex;
         justify-content: center;
-        -webkit-app-region: drag;
+        align-items: center;
+    }
+    .container .toolbar {
+        position: absolute;
+        left: 50%;
+        margin-left: -410px;
     }
     .toolbar > .button-toolbar.button-circularimage {
         order: 1;
@@ -64,7 +70,11 @@ function cssm() {
         order: 2;
     }
     .addressfield {
-        max-width: 600px;
+        width: 600px;
+        position: absolute;
+        left: 50%;
+        margin-left: -300px;
+
     }
     .UrlBar-UrlField:not(:focus) {
         text-align: center;
@@ -74,10 +84,13 @@ function cssm() {
     .addressfield .button-toolbar button:not(.button-popup) {
         display: none;
     }
-
+    .addressfield .pageload .pageload-indicator {
+        width: 600px;
+        left: calc(50% + 111px);
+        margin-left: -300px;
+    }
     .addressfield .button-toolbar.create-bookmark .button-popup {
-        position: absolute !important;
-        left: -310px !important;
+        margin-left: calc((var(--popupWidth) * -0.8) + var(--popupLeftOffset));
     }
     .extension-popup, .button-popup {
         box-shadow: 0 0 40px rgba(0,0,0,0.25);
@@ -99,6 +112,9 @@ function cssm() {
     }
     button.button-startpage:after {
         display: none;
+    }
+    .right#panels-container.overlay .panel-group {
+        box-shadow: -20px 0 50px -14px rgb(0, 0, 0, 0.18);
     }
     `;
     document.getElementsByTagName('head')[0].appendChild(style);
