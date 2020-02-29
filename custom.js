@@ -9,6 +9,7 @@ function cssm() {
     .toolbar.toolbar-addressbar {
         display: flex;
         order: -2 !important;
+        min-height: 34px;
         -webkit-app-region: drag;
     }
     .toolbar.toolbar-insideinput {
