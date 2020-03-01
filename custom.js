@@ -86,9 +86,10 @@ function cssm() {
         display: none;
     }
     .addressfield .pageload .pageload-indicator {
-        width: 600px;
+        width: 598px;
         left: calc(50% + 111px);
-        margin-left: -300px;
+        margin-left: -299px;
+        top: 0;
     }
     .addressfield .button-toolbar.create-bookmark .button-popup {
         margin-left: calc((var(--popupWidth) * -0.8) + var(--popupLeftOffset));
