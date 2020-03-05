@@ -92,7 +92,7 @@ function cssm() {
         top: 0;
     }
     .addressfield .button-toolbar.create-bookmark .button-popup {
-        margin-left: calc((var(--popupWidth) * -0.8) + var(--popupLeftOffset));
+        margin-left: -340px;
     }
     .extension-popup, .button-popup {
         box-shadow: 0 0 40px rgba(0,0,0,0.25);
