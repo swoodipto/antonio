@@ -29,6 +29,9 @@ function cssm() {
     .addressfield .pageload .pageload-ticker {
         display: none;
     }
+    .SiteInfoButton.secure, .SiteInfoButton.certified {
+        z-index: 9;
+    }
     .stacks-on.tabs-bottom .tab-strip .tab-group-indicator {
         bottom: 25px;
     }
@@ -95,7 +98,7 @@ function cssm() {
         margin-left: -340px;
     }
     .extension-popup, .button-popup {
-        box-shadow: 0 0 40px rgba(0,0,0,0.25);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 5px 25px rgba(0, 0, 0, 0.2);
         top: 76px !important;
     }
     .extension-popup.top:before,
