@@ -20,6 +20,10 @@ function cssm() {
     .address-top #tabs-container.bottom {
         border: 0;
     }
+    .addressfield, .searchfield {
+        background-color: rgba(0,0,0,0.45);
+        border-color: transparent;
+    }
     .tabs-bottom .tab-position .tab {
         border-radius: 0;
     }
