@@ -106,6 +106,15 @@ function cssm() {
     .button-popup-arrow:before {
         display: none;
     }
+    .startpage {
+        background-color: #f6f6f6 !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .startpage {
+            background-color: rgb(12, 16, 18) !important;
+        }
+    }
     .startpage .startpage-content .searchfield {
         display: none;
     }
@@ -120,6 +129,17 @@ function cssm() {
     }
     .right#panels-container.overlay .panel-group {
         box-shadow: -20px 0 50px -14px rgb(0, 0, 0, 0.18);
+    }
+    #panels .webpanel-stack .webpanel .webpanel-header {
+        order: 2;
+    }
+
+    #panels .webpanel-stack .webpanel .webpanel-content {
+        order: 1;
+    }
+
+    #panels h1.webpanel-title {
+        font-size: 14px;
     }
     `;
     document.getElementsByTagName('head')[0].appendChild(style);
