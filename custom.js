@@ -130,17 +130,27 @@ function cssm() {
     button.button-startpage:after {
         display: none;
     }
+    #switch {
+        background-color: var(--colorBg);
+    }
     .right#panels-container.overlay .panel-group {
         box-shadow: -20px 0 50px -14px rgb(0, 0, 0, 0.18);
+    }
+    .left#panels-container.overlay .panel-group {
+        box-shadow: 20px 0 50px -14px rgb(0, 0, 0, 0.18);
+    }
+    #panels-container.left #switch {
+        box-shadow: inset -8px 0 20px -8px var(--colorBorder);
+    }
+    #panels-container.right #switch {
+        box-shadow: inset 8px 0 20px -8px var(--colorBorder);
     }
     #panels .webpanel-stack .webpanel .webpanel-header {
         order: 2;
     }
-
     #panels .webpanel-stack .webpanel .webpanel-content {
         order: 1;
     }
-
     #panels h1.webpanel-title {
         font-size: 14px;
     }
