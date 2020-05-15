@@ -39,12 +39,12 @@
 
 .OmniDropdown {
     background: var(--colorBgAlpha);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(35px);
 }
 
 #modal-bg {
     background-color: var(--colorBgAlpha);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(35px);
 }
 
 /* Sets the background color to any non-selected 
