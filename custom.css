@@ -1,3 +1,7 @@
+#browser:not(.fullscreen).mac #header {
+    min-height: 34px;
+}
+
 #browser:not(.fullscreen) #main {
     overflow: initial;
     position: absolute;
