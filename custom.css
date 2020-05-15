@@ -1,0 +1,113 @@
+#main {
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    height: calc(100% - 64px);
+}
+
+#titlebar {
+    margin-top: -2px;
+}
+
+#titlebar .window-buttongroup {
+    z-index: 1;
+}
+
+.toolbar.toolbar-addressbar.toolbar-mainbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -64px;;
+    display: flex;
+    justify-content: center;
+}
+
+.addressfield {
+    max-width: 600px;
+}
+
+#tabs-container {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    
+}
+
+.mac #tabs-container.top {
+    padding-left: 0;
+}
+
+.tab-position .tab .tab-header {
+    border-bottom: 1px solid var(--colorBorder);
+}
+
+.tab-group-indicator {
+    top: 0;
+    padding: 0;
+}
+
+.tab-indicator {
+    height: 2px;
+    cursor: pointer;
+    border: 0;
+    border-bottom: 1px solid var(--colorAccentBg);
+    border-left: 1px solid var(--colorAccentBg);
+}
+
+.tab-indicator.active {
+    height: 2px;
+    border: 0;
+    border-bottom: 1px solid var(--colorAccentBg);
+}
+
+.color-behind-tabs-on .tab.active .tab-indicator.active {
+    background-color: var(--colorAccentBgFadedMost);
+}
+
+.color-behind-tabs-off .tab.active .tab-indicator.active {
+    background-color: var(--colorAccentBgFadedMost);
+}
+
+#switch {
+    background-color: var(--colorBg);
+}
+
+.right#panels-container.overlay .panel-group {
+    box-shadow: -20px 0 50px -14px rgb(0, 0, 0, 0.18);
+}
+
+.left#panels-container.overlay .panel-group {
+    box-shadow: 20px 0 50px -14px rgb(0, 0, 0, 0.18);
+}
+
+#panels-container.left #switch {
+    box-shadow: inset -8px 0 20px -8px var(--colorBorder);
+}
+
+#panels-container.right #switch {
+    box-shadow: inset 8px 0 20px -8px var(--colorBorder);
+}
+
+#panels .webpanel-stack .webpanel .webpanel-header {
+    order: 2;
+}z
+
+#panels .webpanel-stack .webpanel .webpanel-content {
+    order: 1;
+}
+
+#panels h1.webpanel-title {
+    font-size: 14px;
+}
+
+#switch button.webviewbtn img {
+    padding: 1px;
+}
+
+.theme-dark #switch button.webviewbtn img {
+    background-color: transparent;
+}
