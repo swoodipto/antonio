@@ -1,4 +1,4 @@
-#main {
+#browser:not(.fullscreen) #main {
     overflow: initial;
     position: absolute;
     left: 0;
@@ -7,15 +7,15 @@
     height: calc(100% - 64px);
 }
 
-#titlebar {
+#browser:not(.fullscreen) #titlebar {
     margin-top: -2px;
 }
 
-#titlebar .window-buttongroup {
+#browser:not(.fullscreen) #titlebar .window-buttongroup {
     z-index: 1;
 }
 
-.toolbar.toolbar-addressbar.toolbar-mainbar {
+#browser:not(.fullscreen) .toolbar.toolbar-addressbar.toolbar-mainbar {
     position: absolute;
     left: 0;
     right: 0;
@@ -24,52 +24,117 @@
     justify-content: center;
 }
 
-.addressfield {
+#browser:not(.fullscreen) .addressfield {
     max-width: 600px;
 }
 
-#tabs-container {
+.theme-dark .addressfield, .theme-dark .searchfield {
+    border: 1px solid rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.6);
+}
+
+.extension-popup, .button-popup, .OmniDropdown {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.OmniDropdown {
+    background: var(--colorBgAlpha);
+    backdrop-filter: blur(10px);
+}
+
+#modal-bg {
+    background-color: var(--colorBgAlpha);
+    backdrop-filter: blur(10px);
+}
+
+/* Sets the background color to any non-selected 
+ * element of the quick command menu to transparent */
+ #modal-bg *:not([data-selected])
+ {
+     background-color: rgba(0,0,0,0)!important;
+ }
+
+#browser:not(.fullscreen) #tabs-container {
     position: absolute;
-    top: 27px;
+    top: 34px;
     left: 0;
     right: 0;
     padding: 0;
     
 }
 
-.mac #tabs-container.top {
+#browser:not(.fullscreen) .mac #tabs-container.top {
     padding-left: 0;
 }
 
-.tab-position .tab .tab-header {
+#browser:not(.fullscreen) .tab-position .tab .tab-header {
     border-bottom: 1px solid var(--colorBorder);
 }
 
-.tab-group-indicator {
+#browser:not(.fullscreen) .tab-group-indicator {
     top: 0;
     padding: 0;
 }
 
-.tab-indicator {
+#browser:not(.fullscreen) .tab-indicator {
     height: 2px;
     cursor: pointer;
     border: 0;
     border-bottom: 1px solid var(--colorAccentBg);
-    border-left: 1px solid var(--colorAccentBg);
 }
 
-.tab-indicator.active {
-    height: 2px;
+#browser:not(.fullscreen) .tab-indicator.active {
+    height: 3px;
     border: 0;
-    border-bottom: 1px solid var(--colorAccentBg);
+    border-bottom: 2px solid var(--colorAccentBg);
 }
 
-.color-behind-tabs-on .tab.active .tab-indicator.active {
+#browser:not(.fullscreen).tabs-top .tab-position .tab {
+    border-radius: 0;
+}
+
+#browser:not(.fullscreen) .tab-position .tab .tab-header {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+#browser:not(.fullscreen) .color-behind-tabs-on .tab.active .tab-indicator.active {
     background-color: var(--colorAccentBgFadedMost);
 }
 
-.color-behind-tabs-off .tab.active .tab-indicator.active {
+#browser:not(.fullscreen) .color-behind-tabs-off .tab.active .tab-indicator.active {
     background-color: var(--colorAccentBgFadedMost);
+}
+
+.startpage {
+    background-color: #f6f6f6 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .startpage {
+        background-color: rgb(12, 16, 18) !important;
+    }
+}
+
+.tab.active:not(.marked):not(.tab-mini):before,
+.tab.active:not(.marked):not(.tab-mini):after,
+.startpage .startpage-content .searchfield {
+    display: none;
+}
+
+.startpage .startpage-navigation .startpage-navigation-group {
+    border-left: 0;
+}
+
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+button.button-startpage:after {
+    display: none;
+}
+
+.thumbnail-image {
+    box-shadow: 0px 10px 50px -15px rgba(0,0,0,0.2) !important;
 }
 
 #switch {
