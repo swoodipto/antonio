@@ -7,7 +7,7 @@
     height: calc(100% - 64px);
 }
 
-#browser:not(.fullscreen) #titlebar {
+#browser:not(.fullscreen):not(.is-settingspage) #titlebar {
     margin-top: -2px;
 }
 
