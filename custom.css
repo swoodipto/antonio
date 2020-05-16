@@ -11,12 +11,21 @@
     height: calc(100% - 64px);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) #titlebar {
+#browser:not(.fullscreen) #titlebar {
     margin-top: -2px;
 }
 
 #browser:not(.fullscreen) #titlebar .window-buttongroup {
     z-index: 1;
+}
+
+.mac#browser.popup #titlebar, .mac#browser.popup #header, .mac#browser.popup .settings-header {
+    height: 34px;
+    line-height: 34px;
+}
+
+#browser.mac #titlebar.tabless .window-buttongroup {
+    margin-top: 13px;
 }
 
 #browser:not(.fullscreen) .toolbar.toolbar-addressbar.toolbar-mainbar {
