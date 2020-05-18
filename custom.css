@@ -46,11 +46,11 @@
 }
 
 #browser:not(.fullscreen).theme-dark.hasfocus .UrlBar-UrlField:not(:focus) {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #browser:not(.fullscreen).theme-dark.isblurred .UrlBar-UrlField {
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .theme-dark .addressfield, .theme-dark .searchfield {
@@ -74,8 +74,7 @@
 
 /* Sets the background color to any non-selected 
  * element of the quick command menu to transparent */
- #modal-bg *:not([data-selected])
- {
+ #modal-bg *:not([data-selected]) {
      background-color: rgba(0,0,0,0)!important;
  }
 
@@ -85,7 +84,10 @@
     left: 0;
     right: 0;
     padding: 0;
-    
+}
+
+#browser:not(.fullscreen).theme-light .toolbar-tabbar .newtab > button svg {
+    fill: #fff;
 }
 
 #browser:not(.fullscreen) .mac #tabs-container.top {
@@ -96,14 +98,17 @@
     border-bottom: 1px solid var(--colorBorder);
 }
 
-#browser:not(.fullscreen).theme-dark .tab-strip,
-#browser:not(.fullscreen).theme-dark .toolbar-tabbar > .button-toolbar.toggle-trash {
-    background: var(--colorAccentBorderDark);
+.theme-light .addressfield, .theme-light .searchfield {
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
-#browser:not(.fullscreen).theme-dark.isblurred .tab-strip,
-#browser:not(.fullscreen).theme-dark.isblurred .toolbar-tabbar > .button-toolbar.toggle-trash {
+#browser:not(.fullscreen).isblurred .tab-strip, #browser:not(.fullscreen).isblurred .toolbar-tabbar > .button-toolbar.toggle-trash {
     background: var(--colorAccentBgDark);
+}
+
+#browser:not(.fullscreen) .tab-strip, #browser:not(.fullscreen) .toolbar-tabbar > .button-toolbar.toggle-trash {
+    background: var(--colorAccentBorderDark);
 }
 
 #browser:not(.fullscreen) .tab-group-indicator {
