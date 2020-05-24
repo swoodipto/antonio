@@ -279,54 +279,54 @@ button.button-startpage:after {
 }
 
 /* fancy experiments */
-#browser:not(.fullscreen) .addressfield {
+#browser:not(.fullscreen):not(.is-settingspage) .addressfield {
     background-color: transparent;
     border: 0;
 }
 
-#browser:not(.fullscreen) .addressfield:focus-within {
+#browser:not(.fullscreen):not(.is-settingspage) .addressfield:focus-within {
     background: var(--colorAccentBg);
     color: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen) .UrlBar-UrlField {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField {
     color: #fff;
 }
 
-#browser:not(.fullscreen) .UrlBar-UrlField:not(:focus) {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
     text-align: center;
 }
 
-#browser:not(.fullscreen) .button-toolbar > button svg, .button-toolbar > button img,
+#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg, .button-toolbar > button img,
 .SiteInfoButton.secure {
     fill: #fff;
 }
 
-#browser:not(.fullscreen) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
     margin-top: 1px;
 }
 
-#browser:not(.fullscreen) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
     background-color: var(--colorAccentBgDark);
     border-color: var(--colorAccentBorderDark);
     color: var(--colorFg);
 }
 
-#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
     flex: 0 0 22px;
     height: 22px;
 }
 
-#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
     flex: 0 0 20px;
     height: 20px;
     width: 20px;
 }
 
-#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
     min-width: 30px;
 }
 
-.tab-position .tab .favicon {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
     background: rgba(255, 255, 255, 0.45);
 }
