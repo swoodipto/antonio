@@ -45,13 +45,13 @@
     font-size: 12.2px;
 }
 
-#browser:not(.fullscreen).theme-dark.hasfocus .UrlBar-UrlField:not(:focus) {
+/* #browser:not(.fullscreen).theme-dark.hasfocus .UrlBar-UrlField:not(:focus) {
     color: rgba(255, 255, 255, 0.7);
 }
 
 #browser:not(.fullscreen).theme-dark.isblurred .UrlBar-UrlField {
     color: rgba(255, 255, 255, 0.45);
-}
+} */
 
 .theme-dark .addressfield, .theme-dark .searchfield {
     border: 1px solid rgba(0,0,0,0.6);
@@ -96,6 +96,18 @@
 
 #browser:not(.fullscreen) .tab-position .tab .tab-header {
     border-bottom: 1px solid var(--colorBorder);
+}
+
+#browser:not(.fullscreen).theme-light .tab-position .tab:hover:not(.active) {
+    background-color: var(--colorFgAlpha);
+}
+
+#browser:not(.fullscreen).theme-light .tab-position .tab:not(.active) .tab-header .title {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+#browser:not(.fullscreen).theme-light .tab-position .tab:hover:not(.active) .tab-header .title {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .theme-light .addressfield, .theme-light .searchfield {
@@ -234,4 +246,87 @@ button.button-startpage:after {
 
 #browser:not(.fullscreen).mac.theme-dark .toolbar-statusbar {
     background: var(--colorBgAlpha);
+}
+
+@media (max-width: 1200px) {
+    #browser:not(.fullscreen) .addressfield {
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 960px) {
+    #browser:not(.fullscreen) .addressfield {
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 840px) {
+    #browser:not(.fullscreen) .addressfield {
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 700px) {
+    #browser:not(.fullscreen) .toolbar.toolbar-addressbar.toolbar-mainbar {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 620px) {
+    #browser:not(.fullscreen) .toolbar.toolbar-mainbar.toolbar-extensions {
+        display: none;
+    }
+}
+
+/* fancy experiments */
+#browser:not(.fullscreen) .addressfield {
+    background-color: transparent;
+    border: 0;
+}
+
+#browser:not(.fullscreen) .addressfield:focus-within {
+    background: var(--colorAccentBg);
+    color: var(--colorAccentFg);
+}
+
+#browser:not(.fullscreen) .UrlBar-UrlField {
+    color: #fff;
+}
+
+#browser:not(.fullscreen) .UrlBar-UrlField:not(:focus) {
+    text-align: center;
+}
+
+#browser:not(.fullscreen) .button-toolbar > button svg, .button-toolbar > button img,
+.SiteInfoButton.secure {
+    fill: #fff;
+}
+
+#browser:not(.fullscreen) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
+    margin-top: 1px;
+}
+
+#browser:not(.fullscreen) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+    background-color: var(--colorAccentBgDark);
+    border-color: var(--colorAccentBorderDark);
+    color: var(--colorFg);
+}
+
+#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
+    flex: 0 0 22px;
+    height: 22px;
+}
+
+#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
+    flex: 0 0 20px;
+    height: 20px;
+    width: 20px;
+}
+
+#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+    min-width: 30px;
+}
+
+.tab-position .tab .favicon {
+    background: rgba(255, 255, 255, 0.45);
 }
