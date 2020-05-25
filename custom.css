@@ -37,6 +37,11 @@
     justify-content: center;
 }
 
+.SiteInfoButton.certified {
+    fill: #48ff7e;
+    color: #48ff7e;
+}
+
 #browser:not(.fullscreen) .addressfield {
     max-width: 600px;
 }
@@ -329,4 +334,8 @@ button.button-startpage:after {
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
     background: rgba(255, 255, 255, 0.45);
+}
+
+#browser:not(.fullscreen):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
+    filter: none;
 }
