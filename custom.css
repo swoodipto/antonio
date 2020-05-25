@@ -140,6 +140,10 @@
     fill: var(--colorAccentFgFaded);
 }
 
+#browser:not(.fullscreen):not(.is-settingspage) #panels .button-toolbar > button svg {
+    fill: var(--colorFg);
+}
+
 #browser:not(.fullscreen) .tab-group-indicator {
     top: 0;
     padding: 0;
