@@ -37,7 +37,7 @@
     justify-content: center;
 }
 
-.SiteInfoButton.certified {
+#browser:not(.fullscreen) .SiteInfoButton.certified {
     fill: #48ff7e;
     color: #48ff7e;
 }
@@ -91,8 +91,8 @@
     padding: 0;
 }
 
-#browser:not(.fullscreen).theme-light .toolbar-tabbar .newtab > button svg {
-    fill: #fff;
+#browser:not(.fullscreen) .toolbar-tabbar .newtab > button svg {
+    fill: var(--colorAccentFg);
 }
 
 #browser:not(.fullscreen) .mac #tabs-container.top {
@@ -101,6 +101,10 @@
 
 #browser:not(.fullscreen) .tab-position .tab .tab-header {
     border-bottom: 1px solid var(--colorBorder);
+}
+
+#browser:not(.fullscreen) .tab-position .tab .close svg {
+    fill: var(--colorAccentFg);
 }
 
 #browser:not(.fullscreen).theme-light .tab-position .tab:hover:not(.active) {
