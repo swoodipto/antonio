@@ -128,6 +128,10 @@
     background: var(--colorAccentBorderDark);
 }
 
+#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar.toggle-trash > button svg, .button-toolbar > button img, .SiteInfoButton.secure {
+    fill: var(--colorAccentFgFaded);
+}
+
 #browser:not(.fullscreen) .tab-group-indicator {
     top: 0;
     padding: 0;
@@ -295,7 +299,7 @@ button.button-startpage:after {
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField {
-    color: #fff;
+    color: var(--colorAccentFg);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
@@ -304,7 +308,7 @@ button.button-startpage:after {
 
 #browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg, .button-toolbar > button img,
 .SiteInfoButton.secure {
-    fill: #fff;
+    fill: var(--colorAccentFg);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
