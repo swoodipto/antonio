@@ -19,7 +19,7 @@
     z-index: 1;
 }
 
-.mac#browser.popup #titlebar, .mac#browser.popup #header, .mac#browser.popup .settings-header {
+.mac#browser:not(.fullscreen).popup #titlebar, .mac#browser:not(.fullscreen).popup #header, .mac#browser:not(.fullscreen).popup .settings-header {
     height: 34px;
     line-height: 34px;
 }
@@ -46,6 +46,10 @@
     max-width: 600px;
 }
 
+#browser:not(.fullscreen) .addressfield .pageload {
+    color: var(--colorAccentFgFaded);
+}
+
 #browser:not(.fullscreen) .UrlBar-UrlField {
     font-size: 12.2px;
 }
@@ -58,10 +62,10 @@
     color: rgba(255, 255, 255, 0.45);
 } */
 
-.theme-dark .addressfield, .theme-dark .searchfield {
+/* .theme-dark .addressfield, .theme-dark .searchfield {
     border: 1px solid rgba(0,0,0,0.6);
     background-color: rgba(0,0,0,0.6);
-}
+} */
 
 .extension-popup, .button-popup, .OmniDropdown {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 5px 25px rgba(0, 0, 0, 0.2);
@@ -119,10 +123,10 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-.theme-light .addressfield, .theme-light .searchfield {
+/* .theme-light .addressfield, .theme-light .searchfield {
     border: 1px solid rgba(255, 255, 255, 0.55);
     background-color: rgba(255, 255, 255, 0.4);
-}
+} */
 
 #browser:not(.fullscreen).isblurred .tab-strip, #browser:not(.fullscreen).isblurred .toolbar-tabbar > .button-toolbar.toggle-trash {
     background: var(--colorAccentBgDark);
