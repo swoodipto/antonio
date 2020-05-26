@@ -116,11 +116,11 @@
 }
 
 #browser:not(.fullscreen).theme-light .tab-position .tab:not(.active) .tab-header .title {
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--colorAccentFgFaded);
 }
 
 #browser:not(.fullscreen).theme-light .tab-position .tab:hover:not(.active) .tab-header .title {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--colorAccentFg);
 }
 
 /* .theme-light .addressfield, .theme-light .searchfield {
