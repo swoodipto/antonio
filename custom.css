@@ -54,6 +54,11 @@
     font-size: 12.2px;
 }
 
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField::selection {
+    background: var(--colorAccentBgDarker);
+    color: var(--colorAccentFg);
+}
+
 /* #browser:not(.fullscreen).theme-dark.hasfocus .UrlBar-UrlField:not(:focus) {
     color: rgba(255, 255, 255, 0.7);
 }
@@ -140,7 +145,8 @@
     fill: var(--colorAccentFgFaded);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) #panels .button-toolbar > button svg {
+#browser:not(.fullscreen):not(.is-settingspage) #panels .button-toolbar > button svg,
+#browser:not(.fullscreen):not(.is-settingspage) .find-in-page.toolbar .button-toolbar > button svg {
     fill: var(--colorFg);
 }
 
