@@ -108,6 +108,14 @@
     padding-left: 0;
 }
 
+#browser:not(.fullscreen).theme-light .tab-position .tab {
+    background-color: var(--colorAccentBgDark);
+}
+
+#browser:not(.fullscreen).theme-light .tab-position .tab.active {
+    background-color: var(--colorAccentBgFaded);
+}
+
 #browser:not(.fullscreen) .tab-position .tab .tab-header {
     border-bottom: 1px solid var(--colorBorder);
 }
@@ -182,6 +190,17 @@
 
 #browser:not(.fullscreen) .color-behind-tabs-off .tab.active .tab-indicator.active {
     background-color: var(--colorAccentBgFadedMost);
+}
+
+#browser:not(.fullscreen) input[type=button][type=submit]:hover:not([disabled]),
+#browser:not(.fullscreen) input[type=submit][type=submit]:hover:not([disabled]),
+#browser:not(.fullscreen) input[type=color][type=submit]:hover:not([disabled]),
+#browser:not(.fullscreen) .webpage-button[type=submit]:hover:not([disabled]),
+#browser:not(.fullscreen) input[type=button].primary:hover:not([disabled]),
+#browser:not(.fullscreen) input[type=submit].primary:hover:not([disabled]),
+#browser:not(.fullscreen) input[type=color].primary:hover:not([disabled]),
+#browser:not(.fullscreen) .webpage-button.primary:hover:not([disabled]) {
+    color: var(--colorHighlightBgDark);
 }
 
 .startpage {
