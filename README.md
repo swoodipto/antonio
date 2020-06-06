@@ -8,16 +8,16 @@ _A Vivaldi mod, almost Safari, but its not._
 ### Prepare Vivaldi with the following Settings/Preferances:
 
 - **THEMES**
- - Select any theme and click **_"Edit Theme"_**.
- - Under **Theme Preferences**, check **_"Accent Color from Active Page"_**.
- - Keep "Apply Accent Color to Window" and "Transparent Tabs" unchecked.
+    - Select any theme and click **_"Edit Theme"_**.
+    - Under **Theme Preferences**, check **_"Accent Color from Active Page"_**.
+    - Keep "Apply Accent Color to Window" and "Transparent Tabs" unchecked.
 - **TABS**
- - Set **Tab Bar Position** to **_"Top"_**.
- - Under **Tab Display**; set **Page Load Progress** to **_"None"_**.
+    - Set **Tab Bar Position** to **_"Top"_**.
+    - Under **Tab Display**; set **Page Load Progress** to **_"None"_**.
 - **ADDRESS BAR**
- - Check **_"Show Address Bar"_**.
- - Set **Address Bar Position** to **_"Top"_**.
- - Under **Address Bar Options**, check **_"Select Address on Activation"_** and **_"Page Load Progress Bar"_**; rest unchecked.
+    - Check **_"Show Address Bar"_**.
+    - Set **Address Bar Position** to **_"Top"_**.
+    - Under **Address Bar Options**, check **_"Select Address on Activation"_** and **_"Page Load Progress Bar"_**; rest unchecked.
 
 ### Mod Vivaldi using the CSS:
 
