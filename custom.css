@@ -1,4 +1,4 @@
-/*
+'/*
  * Antionio — A Vivaldi mod, almost Safari, but its not.
  * https://github.com/otpidusprime/antonio
  * Version: 1.0
@@ -17,6 +17,11 @@
     right: 0;
     top: 64px;
     height: calc(100% - 64px);
+}
+
+#browser:not(.fullscreen).is-settingspage #main {
+    top: 34px;
+    height: calc( 100% - 34px );
 }
 
 #browser:not(.fullscreen) #titlebar {
@@ -86,12 +91,12 @@
 
 .OmniDropdown {
     background: var(--colorBgAlpha);
-    backdrop-filter: blur(35px);
+    backdrop-filter: blur(22px);
 }
 
 #modal-bg {
     background-color: var(--colorBgAlpha);
-    backdrop-filter: blur(35px);
+    backdrop-filter: blur(22px);
 }
 
 /* Sets the background color to any non-selected 
@@ -155,6 +160,7 @@
 
 #browser:not(.fullscreen) .tab-strip, #browser:not(.fullscreen) .toolbar-tabbar > .button-toolbar.toggle-trash {
     background: var(--colorAccentBorderDark);
+    -webkit-app-region: drag;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .button-toolbar.toggle-trash > button svg, .button-toolbar > button img, .SiteInfoButton.secure {
@@ -215,6 +221,10 @@
     background-color: #f6f6f6 !important;
 }
 
+.dials .dial .thumbnail-image {
+    transition: all 150ms ease-in-out;
+}
+
 @media (prefers-color-scheme: dark) {
     .startpage {
         background-color: rgb(12, 16, 18) !important;
@@ -231,8 +241,39 @@
     border-left: 0;
 }
 
+.startpage .startpage-navigation {
+    padding: 11px 12px;
+}
+
+.startpage .startpage-navigation button.button-startpage {
+    min-height: 0;
+    padding: 3px 10px;
+}
+
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {
+    border-width: 2px;
+    margin-left: 24px;
+    padding-left: 12px;
+}
+
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage {
+    border-radius: var(--radius);
+    margin-left: 10px;
+}
+
+.startpage .button-startpage.active {
+    border: 0;
+    background: var(--colorHighlightBg);
+    color: var(--colorHighlightFg);
+}
+
 .startpage .startpage-navigation .startpage-navigation-group .button-startpage:hover {
-    background: rgba(0,0,0,0.3);
+    background: var(--colorHighlightBgAlpha);
+    color: var(--colorFg);
+}
+
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage:hover svg {
+    fill: var(--colorFg);
 }
 
 button.button-startpage:after {
@@ -351,8 +392,10 @@ button.button-startpage:after {
     text-align: center;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg, .button-toolbar > button img,
-.SiteInfoButton.secure {
+#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg,
+.button-toolbar > button img,
+.SiteInfoButton.secure,
+button.button-addressfield svg {
     fill: var(--colorAccentFg);
 }
 
