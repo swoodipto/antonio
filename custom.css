@@ -160,7 +160,6 @@
 
 #browser:not(.fullscreen) .tab-strip, #browser:not(.fullscreen) .toolbar-tabbar > .button-toolbar.toggle-trash {
     background: var(--colorAccentBorderDark);
-    -webkit-app-region: drag;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .button-toolbar.toggle-trash > button svg, .button-toolbar > button img, .SiteInfoButton.secure {
