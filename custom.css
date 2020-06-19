@@ -24,6 +24,12 @@
     height: calc( 100% - 34px );
 }
 
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+    background-color: var(--colorHighlightBg);
+    fill: var( --colorHighlightFg);
+    color: var( --colorHighlightFg);
+}
+
 #browser:not(.fullscreen) #titlebar {
     margin-top: -3px;
 }
