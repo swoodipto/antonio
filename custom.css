@@ -236,6 +236,10 @@
     display: none;
 }
 
+.startpage .startpage-drawer-wrapper {
+    box-shadow: 0px -10px 50px -25px rgba(0,0,0,0.3) !important;
+}
+
 .startpage .startpage-navigation .startpage-navigation-group {
     border-left: 0;
 }
