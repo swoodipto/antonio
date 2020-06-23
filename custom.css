@@ -74,8 +74,8 @@
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField::selection {
-    background: var(--colorAccentBgDarker);
-    color: var(--colorAccentFg);
+    background: var(--colorAccentFg);
+    color: var(--colorAccentBg);
 }
 
 /* #browser:not(.fullscreen).theme-dark.hasfocus .UrlBar-UrlField:not(:focus) {
