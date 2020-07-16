@@ -305,6 +305,34 @@ button.button-startpage:after {
     box-shadow: 20px 0 50px -14px rgb(0, 0, 0, 0.18);
 }
 
+/*fixed panel stack style*/
+#panels-container:after {
+    background-color: transparent;
+}
+
+.right#panels-container button.fullheight.alternate {
+    min-width: 200px;
+    box-shadow: -12px 0 10px -8px rgb(0, 0, 0, 0.1);
+    left: 0;
+}
+
+.right#panels-container button.fullheight.alternate:active,
+.right#panels-container button.fullheight.alternate.touch-active {
+    left: 0;
+}
+
+.left#panels-container button.fullheight {
+    min-width: 200px;
+    box-shadow: 12px 0 10px -8px rgb(0, 0, 0, 0.1);
+    right: 0;
+}
+
+.left#panels-container button.fullheight:active,
+.left#panels-container button.fullheight.touch-active {
+    right: 0;
+}
+/*fixed panel stack style*/
+
 #panels-container.left #switch {
     box-shadow: inset -8px 0 20px -8px var(--colorBorder);
 }
