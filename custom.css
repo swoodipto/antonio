@@ -306,29 +306,29 @@ button.button-startpage:after {
 }
 
 /*fixed panel stack style*/
-#panels-container:after {
+#panels-container:not(.overlay):after {
     background-color: transparent;
 }
 
-.right#panels-container button.fullheight.alternate {
+.right#panels-container:not(.overlay) button.fullheight.alternate {
     min-width: 28px;
     box-shadow: -12px 0 10px -8px rgb(0, 0, 0, 0.1);
     left: 0;
 }
 
-.right#panels-container button.fullheight.alternate:active,
-.right#panels-container button.fullheight.alternate.touch-active {
+.right#panels-container:not(.overlay) button.fullheight.alternate:active,
+.right#panels-container:not(.overlay) button.fullheight.alternate.touch-active {
     left: 0;
 }
 
-.left#panels-container button.fullheight {
+.left#panels-container:not(.overlay) button.fullheight {
     min-width: 28px;
     box-shadow: 12px 0 10px -8px rgb(0, 0, 0, 0.1);
     right: 0;
 }
 
-.left#panels-container button.fullheight:active,
-.left#panels-container button.fullheight.touch-active {
+.left#panels-container:not(.overlay) button.fullheight:active,
+.left#panels-container:not(.overlay) button.fullheight.touch-active {
     right: 0;
 }
 /*fixed panel stack style*/
