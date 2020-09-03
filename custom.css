@@ -343,7 +343,8 @@ button.button-startpage:after {
 
 #panels .webpanel-stack .webpanel .webpanel-header {
     order: 2;
-}z
+    border-top: 1px solid var(--colorBgDark);
+}
 
 #panels .webpanel-stack .webpanel .webpanel-content {
     order: 1;
