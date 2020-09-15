@@ -1,3 +1,5 @@
+> This mod breaks in Vivaldi 3.3. I will try my best to update it ASAP.
+
 # 🎻 Antonio
 _A Vivaldi mod, almost Safari, but its not._
 
