@@ -217,12 +217,15 @@ button.button-startpage:after {
     text-align: center;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg,
+/*
+    fix/3.3 → remove custom accent colors for icons
+*/
+/* #browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg,
 .button-toolbar > button img,
 .SiteInfoButton.secure,
 button.button-addressfield svg {
     fill: var(--colorAccentFg);
-}
+} */
 
 #browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
     margin-top: 1px;
