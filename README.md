@@ -1,4 +1,4 @@
-> This mod breaks in Vivaldi 3.3. I will try my best to update it ASAP.
+> This mod breaks in Vivaldi 3.3. I will try my best to update it ASAP. Meanwhile, find the buffer version of the mod which "sorta" works in [sandbox/vivaldi-3.3](https://github.com/otpidusprime/antonio/tree/sandbox/vivaldi-3.3) branch.
 
 # 🎻 Antonio
 _A Vivaldi mod, almost Safari, but its not._
