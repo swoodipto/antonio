@@ -209,13 +209,16 @@ button.button-startpage:after {
     color: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField {
+/*
+    fix/3.3 → remove custom addressfield text color and justification
+*/
+/* #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField {
     color: var(--colorAccentFg);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
     text-align: center;
-}
+} */
 
 /*
     fix/3.3 → remove custom accent colors for icons
