@@ -94,25 +94,28 @@ button.button-startpage:after {
     background-color: transparent;
 }
 
-.right#panels-container:not(.overlay) button.fullheight.alternate {
+/*
+    fix/3.3 → change .fullheight to .SlideBar--FullHeight
+*/
+.right#panels-container:not(.overlay) button.SlideBar--FullHeight.alternate {
     min-width: 28px;
     box-shadow: -12px 0 10px -8px rgb(0, 0, 0, 0.1);
     left: 0;
 }
 
-.right#panels-container:not(.overlay) button.fullheight.alternate:active,
-.right#panels-container:not(.overlay) button.fullheight.alternate.touch-active {
+.right#panels-container:not(.overlay) button.SlideBar--FullHeight.alternate:active,
+.right#panels-container:not(.overlay) button.SlideBar--FullHeight.alternate.touch-active {
     left: 0;
 }
 
-.left#panels-container:not(.overlay) button.fullheight {
+.left#panels-container:not(.overlay) button.SlideBar--FullHeight {
     min-width: 28px;
     box-shadow: 12px 0 10px -8px rgb(0, 0, 0, 0.1);
     right: 0;
 }
 
-.left#panels-container:not(.overlay) button.fullheight:active,
-.left#panels-container:not(.overlay) button.fullheight.touch-active {
+.left#panels-container:not(.overlay) button.SlideBar--FullHeight:active,
+.left#panels-container:not(.overlay) button.SlideBar--FullHeight.touch-active {
     right: 0;
 }
 /*fixed panel stack style*/
