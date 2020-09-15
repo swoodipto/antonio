@@ -255,9 +255,12 @@ button.button-addressfield svg {
     min-width: 30px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
+/* 
+    fix/3.3 → Remove favicon background
+*/
+/* #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
     background: rgba(255, 255, 255, 0.45);
-}
+} */
 
 #browser:not(.fullscreen):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
     filter: none;
