@@ -1,4 +1,5 @@
 > This mod breaks in Vivaldi 3.3. I will try my best to update it ASAP.
+
 > This is a sandboxed version of the mod where fixes, enhancements etc. are pushed.
 
 # 🎻 Antonio
