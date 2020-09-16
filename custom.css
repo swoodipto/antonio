@@ -282,11 +282,11 @@ button.button-addressfield svg {
 }
 
 /* 
-    fix/3.3 → Re-add favicon background
+    fix/3.3 → Re-remove favicon background
 */
-#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
+/* #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
     background: rgba(255, 255, 255, 0.2);
-}
+} */
 
 #browser:not(.fullscreen):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
     filter: none;
