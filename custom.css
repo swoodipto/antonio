@@ -19,14 +19,6 @@
     --colorAccentBgDarker: var(--colorAccentBorderDark);
 }
 
-.tabs-top .tab-position .tab {
-    border-radius: 0;
-}
-
-#tabs-container.top {
-    padding-top: 0;
-}
-
 #browser.mac .window-buttongroup {
     margin-top: 10px
 }
