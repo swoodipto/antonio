@@ -6,6 +6,32 @@
  * Author: Sudipto (@otpidusprime)
  */
 
+/*
+    fix/3.3 → COLORS!!!
+*/
+#browser {
+    background-color: var(--colorAccentBgDarker);
+}
+
+#browser.isblurred.dim-blurred {
+    --colorAccentBg: var(--colorAccentBgFaded);
+    --colorAccentBgDark: var(--colorAccentBgFadedMost);
+    --colorAccentBgDarker: var(--colorAccentBorderDark);
+}
+
+.tabs-top .tab-position .tab {
+    border-radius: 0;
+}
+
+#tabs-container.top {
+    padding-top: 0;
+}
+
+#browser.mac .window-buttongroup {
+    margin-top: 10px
+}
+/* end COLORS!!! */
+
 .startpage {
     background-color: #f6f6f6 !important;
 }
@@ -256,11 +282,11 @@ button.button-addressfield svg {
 }
 
 /* 
-    fix/3.3 → Remove favicon background
+    fix/3.3 → Re-add favicon background
 */
-/* #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
     background: rgba(255, 255, 255, 0.45);
-} */
+}
 
 #browser:not(.fullscreen):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
     filter: none;
