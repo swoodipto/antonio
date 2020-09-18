@@ -19,9 +19,12 @@
     --colorAccentBgDarker: var(--colorAccentBorderDark);
 }
 
-#browser.mac .window-buttongroup {
+/*
+    fix/3.3 → Remove custom caption spacing
+*/
+/* #browser.mac .window-buttongroup {
     margin-top: 10px
-}
+} */
 /* end COLORS!!! */
 
 .startpage {
