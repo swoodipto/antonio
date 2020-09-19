@@ -37,10 +37,11 @@
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) #tabs-container {
-    height: 33px !important;
+    height: 32px !important;
     padding: 0;
     box-shadow: unset;
     border-top: 1px solid var(--colorAccentBorder);
+    border-bottom: 1px solid var(--colorAccentBorder);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-strip .toolbar, {
@@ -62,12 +63,18 @@
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-header {
     align-items: center;
-    padding-top: 3px;
+    padding-top: 2px;
     padding-bottom: 0;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab.tab-group .tab-header {
+    padding-top: 5px;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab.active.active {
     border: 0;
+    border-left: 1px solid var(--colorAccentBorder);
+    border-right: 1px solid var(--colorAccentBorder);
     background-color: var(--colorImageBackgroundAlpha, var(--colorAccentBgAlpha));
     color: var(--colorAccentFg);
     opacity: 1;
@@ -105,19 +112,21 @@
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab .tab-indicator.active {
+    background-color: var(--colorAccentBgAlpha);
     border: 0;
+    border-bottom: 1px solid var(--colorAccentBorder);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-indicator:first-of-type,
 #browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-indicator:first-of-type {
     margin: 0;
-    border-left: 0;
+    border-left: 1px solid var(--colorAccentBorder);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-indicator:last-of-type,
 #browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-indicator:last-of-type {
     margin: 0;
-    border-right: 0;
+    border-right: 1px solid var(--colorAccentBorder);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-position .tab,
