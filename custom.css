@@ -26,7 +26,7 @@
 /*
     header
 */
-#browser:not(.fullscreen) #header {
+#browser:not(.fullscreen):not(.is-settingspage) #header {
     position: fixed;
     top: 34px;
     left: 0;
@@ -35,59 +35,69 @@
     border-bottom: 0;
 }
 
-#browser:not(.fullscreen) #tabs-container {
+#browser:not(.fullscreen):not(.is-settingspage) #tabs-container {
     height: 34px !important;
     padding: 0;
 }
 
-#browser:not(.fullscreen) .tab-position .tab {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-strip .toolbar, {
+    height: 34px;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) #tabs-container .toolbar-tabbar .button-toolbar,
+#browser:not(.fullscreen):not(.is-settingspage) #tabs-container .toolbar-tabbar .button-toolbar {
+    top: 0 !important;
+    height: 34px !important;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab {
     border-radius: 0;
 }
 
-#browser:not(.fullscreen) .tab-position .tab .tab-header {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-header {
     align-items: center;
     padding-top: 5px;
     padding-bottom: 0;
 }
 
-#browser:not(.fullscreen) .tab-position .tab.active.active {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab.active.active {
     border-bottom: 1px solid var(--colorAccentBgDark);
 }
 
-#browser:not(.fullscreen) .tab-position .tab .tab-group-indicator {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-group-indicator {
     top: 0;
     border-radius: 0;
     padding: 0;
 }
 
-#browser:not(.fullscreen) .tab .tab-indicator {
+#browser:not(.fullscreen):not(.is-settingspage) .tab .tab-indicator {
     height: 6px;
     border: 2px solid var(--colorAccentBg);
     cursor: pointer;
 }
 
-#browser:not(.fullscreen) .tab .tab-indicator.active {
+#browser:not(.fullscreen):not(.is-settingspage) .tab .tab-indicator.active {
     border: 0;
 }
 
-#browser:not(.fullscreen).tabs-top .tab-indicator:first-of-type,
-#browser:not(.fullscreen).tabs-bottom .tab-indicator:first-of-type {
+#browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-indicator:first-of-type,
+#browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-indicator:first-of-type {
     margin: 0;
     border-left: 0;
 }
 
-#browser:not(.fullscreen).tabs-top .tab-indicator:last-of-type,
-#browser:not(.fullscreen).tabs-bottom .tab-indicator:last-of-type {
+#browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-indicator:last-of-type,
+#browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-indicator:last-of-type {
     margin: 0;
     border-right: 0;
 }
 
-#browser:not(.fullscreen).tabs-top .tab-position .tab,
-#browser:not(.fullscreen).tabs-bottom .tab-position .tab {
+#browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-position .tab,
+#browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-position .tab {
     margin-right: 0;
 }
 
-#browser:not(.fullscreen) .window-buttongroup {
+#browser:not(.fullscreen):not(.is-settingspage) .window-buttongroup {
     position: fixed;
     top: 0;
 }
@@ -95,7 +105,7 @@
 /*
     toolbar
 */
-#browser:not(.fullscreen) .UrlBar.toolbar {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar.toolbar {
     position: fixed;
     top: 0;
     right: 0;
@@ -106,25 +116,25 @@
     background-color: var(--colorAccentBg);
 }
 
-#browser:not(.fullscreen) .toolbar-mainbar:after {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar:after {
     display: none;
 }
 
-#browser:not(.fullscreen) .UrlBar.toolbar .button-toolbar svg,
-.toolbar-tabbar > .button-toolbar > button,
-.toolbar-tabbar > .toolbar-group > .button-toolbar > button {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar.toolbar .button-toolbar svg,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-tabbar > .button-toolbar > button,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-tabbar > .toolbar-group > .button-toolbar > button {
     fill: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar > button:hover,
-#browser:not(.fullscreen) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
-#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar > button:active,
-#browser:not(.fullscreen) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
-#browser:not(.fullscreen) .UrlBar.toolbar .ExtensionIcon--Hidden {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button:hover,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button:active,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar.toolbar .ExtensionIcon--Hidden {
     background-color: var(--colorAccentBgDark);
 }
 
-#browser:not(.fullscreen) .UrlBar-AddressField {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField {
     position: absolute;
     min-width: 600px;
     left: 50%;
@@ -135,45 +145,45 @@
     height: 26px;
 }
 
-#browser:not(.fullscreen) .UrlBar-AddressField .SiteInfoButton-SecurityBadge {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton-SecurityBadge {
     fill: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen) .UrlBar-AddressField .SiteInfoButton.secure {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.secure {
     fill: var(--colorAccentFg);
     background-color: var(--colorAccentBgDark);
 }
 
-#browser:not(.fullscreen) .UrlBar-AddressField .SiteInfoButton.certified {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.certified {
     fill: #fff;
     color: #fff;
     background-color: #3dc33d;
 }
 
-#browser:not(.fullscreen) .UrlBar-AddressField .SiteInfoButton .siteinfo-text {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton .siteinfo-text {
     padding-left: 2px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField:not(:focus) {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField:not(:focus) {
     justify-content: center;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .SearchField:focus-within,
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField:focus-within {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .SearchField:focus-within,
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField:focus-within {
     box-shadow: 0 0 0 1px var(--colorAccentBgFadedMost) inset;
     border-color: var(--colorAccentBgFadedMost);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper {
     color: var(--colorAccentFgAlpha);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper--ShouldHighlight {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper--ShouldHighlight {
     --HighlightColor: var(--colorAccentFg);
     --LowlightColor: var(--colorAccentFgFaded);
 }
 
-#browser:not(.fullscreen) .toolbar.toolbar-droptarget {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-droptarget {
     position: absolute;
     width: 90px;
     left: 50%;
@@ -181,16 +191,16 @@
     background-color: var(--colorAccentBg);
 }
 
-#browser:not(.fullscreen) .toolbar .profile-popup {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar .profile-popup {
     float: right;
 }
 
-#browser:not(.fullscreen) .toolbar-mainbar > .button-toolbar.profile-popup > button.button-pressed {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button.button-pressed {
     background-color: var(--colorAccentBgDarker);
     background-image: none;
 }
 
-#browser:not(.fullscreen) .toolbar .toolbar-extensions {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar .toolbar-extensions {
     position: absolute;
     min-width: 126px;
     lefT: 50%;
@@ -207,7 +217,7 @@
     opacity: 0.6;
 }
 
-#browser:not(.fullscreen) .toolbar.toolbar-droptarget .button-toolbar:not(.button-narrow):last-of-type:before {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-droptarget .button-toolbar:not(.button-narrow):last-of-type:before {
     content: '';
     position: absolute;
     display: none;
@@ -223,7 +233,7 @@
 /*
     main
 */
-#browser:not(.fullscreen) #main {
+#browser:not(.fullscreen):not(.is-settingspage) #main {
     margin-top: 68px;
 }
 /* FIXED END */
@@ -380,7 +390,7 @@ button.button-startpage:after {
     background-color: transparent;
 }
 
-#browser:not(.fullscreen).mac .toolbar-statusbar {
+#browser:not(.fullscreen):not(.is-settingspage).mac .toolbar-statusbar {
     position: absolute;
     width: 50%;
     min-width: 480px;
@@ -395,47 +405,47 @@ button.button-startpage:after {
     box-shadow: 0 8px 25px -10px rgba(0,0,0,0.2);
 }
 
-#browser:not(.fullscreen).mac.theme-dark .toolbar-statusbar {
+#browser:not(.fullscreen):not(.is-settingspage).mac.theme-dark .toolbar-statusbar {
     background: var(--colorBgAlpha);
 }
 
 @media (max-width: 1200px) {
-    #browser:not(.fullscreen) .addressfield {
+    #browser:not(.fullscreen):not(.is-settingspage) .addressfield {
         max-width: 460px;
     }
 }
 
 @media (max-width: 960px) {
-    #browser:not(.fullscreen) .addressfield {
+    #browser:not(.fullscreen):not(.is-settingspage) .addressfield {
         max-width: 340px;
     }
 }
 
 @media (max-width: 840px) {
-    #browser:not(.fullscreen) .addressfield {
+    #browser:not(.fullscreen):not(.is-settingspage) .addressfield {
         max-width: 240px;
     }
 }
 
 @media (max-width: 700px) {
-    #browser:not(.fullscreen) .toolbar.toolbar-addressbar.toolbar-mainbar {
+    #browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-addressbar.toolbar-mainbar {
         justify-content: flex-end;
     }
 }
 
 @media (max-width: 620px) {
-    #browser:not(.fullscreen) .toolbar.toolbar-mainbar.toolbar-extensions {
+    #browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-mainbar.toolbar-extensions {
         display: none;
     }
 }
 
 /* fancy experiments */
-#browser:not(.fullscreen):not(.is-settingspage) .addressfield {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .addressfield {
     background-color: transparent;
     border: 0;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .addressfield:focus-within {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .addressfield:focus-within {
     background: var(--colorAccentBg);
     color: var(--colorAccentFg);
 }
@@ -443,56 +453,56 @@ button.button-startpage:after {
 /*
     fix/3.3 → remove custom addressfield text color and justification
 */
-/* #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField {
+/* #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-UrlField {
     color: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
     text-align: center;
 } */
 
 /*
     fix/3.3 → remove custom accent colors for icons
 */
-/* #browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg,
+/* #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .button-toolbar > button svg,
 .button-toolbar > button img,
 .SiteInfoButton.secure,
 button.button-addressfield svg {
     fill: var(--colorAccentFg);
 } */
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
     margin-top: 1px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
     background-color: var(--colorAccentBgDark);
     border-color: var(--colorAccentBorderDark);
     color: var(--colorFg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
     flex: 0 0 22px;
     height: 22px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
     flex: 0 0 20px;
     height: 20px;
     width: 20px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
     min-width: 30px;
 }
 
 /* 
     fix/3.3 → Re-remove favicon background
 */
-/* #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
+/* #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .tab-position .tab .favicon {
     background: rgba(255, 255, 255, 0.2);
 } */
 
-#browser:not(.fullscreen):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
     filter: none;
 }
