@@ -523,7 +523,6 @@ button.button-addressfield svg {
     flex: 0 0 20px;
     height: 20px;
     width: 20px;
-    border: 2px solid var(--colorAccentBgDarker);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
@@ -539,6 +538,31 @@ button.button-addressfield svg {
 
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
     filter: none;
+}
+
+/*
+    Omnibox drop-down translucency
+    by u/EuhCertes
+    https://www.reddit.com/r/vivaldibrowser/comments/fw644t/translucency_effects_in_vivaldi/
+*/
+.OmniDropdown
+{
+    background: var(--colorBgAlpha);
+    backdrop-filter: blur(15px);
+}
+
+/* Quick command menu translucency */
+#modal-bg
+{
+    background-color: var(--colorBgAlpha);
+    backdrop-filter: blur(15px);
+}
+
+/* Sets the background color to any non-selected 
+ * element of the quick command menu to transparent */
+#modal-bg *:not([data-selected])
+{
+    background-color: rgba(0,0,0,0)!important;
 }
 
 .vivaldi-settings .settings-sidebar .button-category.category-selected {
