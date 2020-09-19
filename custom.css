@@ -153,7 +153,7 @@
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.certified {
     fill: #fff;
     color: #fff;
-    background-color: #3dc33d;
+    background-color: #31bc31;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton .siteinfo-text {
@@ -169,8 +169,8 @@
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField input::selection {
-    color: var(--colorAccentFg);
-    background-color: var(--colorAccentBgFadedMost);
+    color: var(--colorHighlightFg);
+    background-color: var(--colorHighlightBg);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .SearchField:focus-within,
