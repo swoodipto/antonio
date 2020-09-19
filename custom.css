@@ -164,6 +164,10 @@
     justify-content: center;
 }
 
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField input {
+    color: var(--colorAccentFg);
+}
+
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField input::selection {
     color: var(--colorAccentFg);
     background-color: var(--colorAccentBgFadedMost);
