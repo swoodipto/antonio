@@ -9,10 +9,6 @@
 /*
     fix/3.3 → COLORS!!!
 */
-#browser {
-    background-color: var(--colorAccentBg);
-}
-
 #browser.isblurred.dim-blurred {
     --colorAccentBg: var(--colorAccentBgFaded);
     --colorAccentBgDark: var(--colorAccentBgFadedMost);
@@ -33,6 +29,11 @@
     right: 0;
     -webkit-app-region: none;
     border-bottom: 0;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .window-buttongroup {
+    position: fixed;
+    top: -2px;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) #tabs-container {
@@ -95,11 +96,6 @@
 #browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-position .tab,
 #browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-position .tab {
     margin-right: 0;
-}
-
-#browser:not(.fullscreen):not(.is-settingspage) .window-buttongroup {
-    position: fixed;
-    top: 0;
 }
 
 /*
