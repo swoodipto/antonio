@@ -135,8 +135,8 @@
     min-width: 600px;
     left: 50%;
     margin-left: -340px;
-    background-color: var(--colorAccentBgAlphaHeavy);
-    border: 1px solid var(--colorAccentBgAlpha);
+    background-color: var(--colorAccentBorder);
+    border: 1px solid var(--colorAccentBgFadedMore);
     border-radius: var(--radiusHalf);
     height: 26px;
 }
@@ -147,7 +147,7 @@
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.secure {
     fill: var(--colorAccentFg);
-    background-color: var(--colorAccentBgDark);
+    background-color: var(--colorAccentBgDarker);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.certified {
@@ -164,10 +164,16 @@
     justify-content: center;
 }
 
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField input::selection {
+    color: var(--colorAccentFg);
+    background-color: var(--colorAccentBgFadedMost);
+}
+
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .SearchField:focus-within,
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField:focus-within {
     box-shadow: 0 0 0 1px var(--colorAccentBgFadedMost) inset;
     border-color: var(--colorAccentBgFadedMost);
+    background-color: var(--colorAccentBgDarker);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper {
