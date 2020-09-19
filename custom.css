@@ -10,7 +10,7 @@
     fix/3.3 → COLORS!!!
 */
 #browser {
-    background-color: var(--colorAccentBg;
+    background-color: var(--colorAccentBg);
 }
 
 #browser.isblurred.dim-blurred {
