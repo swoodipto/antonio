@@ -37,8 +37,10 @@
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) #tabs-container {
-    height: 34px !important;
+    height: 33px !important;
     padding: 0;
+    box-shadow: unset;
+    border-top: 1px solid var(--colorAccentBorder);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-strip .toolbar, {
@@ -137,7 +139,7 @@
     margin-left: -340px;
     background-color: var(--colorAccentBorder);
     border: 1px solid var(--colorAccentBgFadedMore);
-    border-radius: var(--radiusHalf);
+    border-radius: var(--radius);
     height: 26px;
 }
 
@@ -511,4 +513,11 @@ button.button-addressfield svg {
 
 #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
     filter: none;
+}
+
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+    border: 0;
+    background-color: var(--colorHighlightBg);
+    fill: var(--colorHighlightFg);
+    color: var(--colorHighlightFg);
 }
