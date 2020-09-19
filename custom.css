@@ -55,16 +55,41 @@
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab {
     border-radius: 0;
+    background-color: transparent;
+    opacity: 0.4;
+    transition: opacity .2s ease;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-header {
     align-items: center;
-    padding-top: 5px;
+    padding-top: 3px;
     padding-bottom: 0;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab.active.active {
-    border-bottom: 1px solid var(--colorAccentBgDark);
+    border: 0;
+    background-color: var(--colorImageBackgroundAlpha, var(--colorAccentBgAlpha));
+    color: var(--colorAccentFg);
+    opacity: 1;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage):not(.ui-transparent-tabs) .tab-position .tab:hover:not(.active) {
+    background-color:  var(--colorImageBackgroundAlphaHeavy, var(--colorAccentBgAlphaHeavy));
+    opacity: 0.8;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
+    flex: 0 0 16px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage)  .tab-position .tab .favicon, .tab-position .tab .close {
+    min-width: 16px;
+    min-height: 16px;
+    width: 16px;
+    height: 16px;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-group-indicator {
