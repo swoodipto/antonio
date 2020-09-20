@@ -33,7 +33,7 @@
 
 #browser:not(.fullscreen):not(.is-settingspage) .window-buttongroup {
     position: fixed;
-    top: -2px;
+    top: -1px;
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) #tabs-container {
@@ -132,6 +132,8 @@
 #browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-position .tab,
 #browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-position .tab {
     margin-right: 0;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 }
 
 /*
