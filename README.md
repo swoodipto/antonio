@@ -54,3 +54,7 @@ Read the story behind this Mod [on my Blog](https://wp.me/padUp4-Bw).
 ### [v1.0](https://github.com/otpidusprime/antonio/releases/tag/v1.0)
 
 - Initial release
+
+### [v1.1](https://github.com/otpidusprime/antonio/releases/tag/v1.1)
+
+- Fixed Vivaldi 3.3 compatibility (#1)
