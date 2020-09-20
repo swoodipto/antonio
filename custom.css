@@ -1,226 +1,293 @@
 /*
  * Antionio — A Vivaldi mod, almost Safari, but its not.
  * https://github.com/otpidusprime/antonio
- * Version: 1.0
+ * Version: sandbox-vivaldi-3.3
  *
  * Author: Sudipto (@otpidusprime)
  */
 
-#browser:not(.fullscreen).mac #header {
-    min-height: 34px;
+/*
+    fix/3.3 → COLORS!!!
+*/
+#browser.isblurred.dim-blurred {
+    --colorAccentBg: var(--colorAccentBgFaded);
+    --colorAccentBgDark: var(--colorAccentBgFadedMost);
+    --colorAccentBgDarker: var(--colorAccentBorderDark);
 }
 
-#browser:not(.fullscreen) #main {
-    overflow: initial;
-    position: absolute;
+
+/*
+    FIXED
+*/
+/*
+    header
+*/
+#browser:not(.fullscreen):not(.is-settingspage) #header {
+    position: fixed;
+    top: 34px;
     left: 0;
     right: 0;
-    top: 64px;
-    height: calc(100% - 64px);
+    -webkit-app-region: none;
+    border-bottom: 0;
 }
 
-#browser:not(.fullscreen).is-settingspage #main {
-    top: 34px;
-    height: calc( 100% - 34px );
+#browser:not(.fullscreen):not(.is-settingspage) .window-buttongroup {
+    position: fixed;
+    top: -2px;
 }
 
-.vivaldi-settings .settings-sidebar .button-category.category-selected {
-    background-color: var(--colorHighlightBg);
-    fill: var( --colorHighlightFg);
-    color: var( --colorHighlightFg);
+#browser:not(.fullscreen):not(.is-settingspage) #tabs-container {
+    height: 32px !important;
+    padding: 0;
+    box-shadow: unset;
+    border-top: 1px solid var(--colorAccentBorder);
+    border-bottom: 1px solid var(--colorAccentBorder);
 }
 
-#browser:not(.fullscreen) #titlebar {
-    margin-top: -3px;
-}
-
-#browser:not(.fullscreen) #titlebar .window-buttongroup {
-    z-index: 1;
-}
-
-.mac#browser:not(.fullscreen).popup #titlebar, .mac#browser:not(.fullscreen).popup #header, .mac#browser:not(.fullscreen).popup .settings-header {
+#browser:not(.fullscreen):not(.is-settingspage) .tab-strip .toolbar, {
     height: 34px;
-    line-height: 34px;
 }
 
-#browser.mac #titlebar.tabless .window-buttongroup {
-    margin-top: 13px;
+#browser:not(.fullscreen):not(.is-settingspage) #tabs-container .toolbar-tabbar .button-toolbar,
+#browser:not(.fullscreen):not(.is-settingspage) #tabs-container .toolbar-tabbar .button-toolbar {
+    top: 0 !important;
+    height: 34px !important;
 }
 
-#browser:not(.fullscreen) .toolbar.toolbar-addressbar.toolbar-mainbar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -64px;;
-    display: flex;
-    justify-content: center;
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab {
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 0.4;
+    transition: opacity .2s ease;
 }
 
-#browser:not(.fullscreen) .SiteInfoButton.certified {
-    fill: #48ff7e;
-    color: #48ff7e;
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-header {
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 0;
 }
 
-#browser:not(.fullscreen) .addressfield {
-    max-width: 600px;
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab.tab-group .tab-header {
+    padding-top: 5px;
 }
 
-#browser:not(.fullscreen) .addressfield .pageload {
-    color: var(--colorAccentFgFaded);
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab.active.active {
+    border: 0;
+    border-left: 1px solid var(--colorAccentBorder);
+    border-right: 1px solid var(--colorAccentBorder);
+    background-color: var(--colorImageBackgroundAlpha, var(--colorAccentBgAlpha));
+    color: var(--colorAccentFg);
+    opacity: 1;
 }
 
-#browser:not(.fullscreen) .UrlBar-UrlField {
-    font-size: 12.2px;
+#browser:not(.fullscreen):not(.is-settingspage):not(.ui-transparent-tabs) .tab-position .tab:hover:not(.active) {
+    background-color:  var(--colorImageBackgroundAlphaHeavy, var(--colorAccentBgAlphaHeavy));
+    opacity: 0.8;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField::selection {
-    background: var(--colorHighlightBgDark);
-    color: var(--colorHighlightFg);
-}
-
-/* #browser:not(.fullscreen).theme-dark.hasfocus .UrlBar-UrlField:not(:focus) {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-#browser:not(.fullscreen).theme-dark.isblurred .UrlBar-UrlField {
-    color: rgba(255, 255, 255, 0.45);
-} */
-
-/* .theme-dark .addressfield, .theme-dark .searchfield {
-    border: 1px solid rgba(0,0,0,0.6);
-    background-color: rgba(0,0,0,0.6);
-} */
-
-.extension-popup, .button-popup, .OmniDropdown {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 5px 25px rgba(0, 0, 0, 0.2);
-}
-
-.OmniDropdown {
-    background: var(--colorBgAlpha);
-    backdrop-filter: blur(22px);
-}
-
-#modal-bg {
-    background-color: var(--colorBgAlpha);
-    backdrop-filter: blur(22px);
-}
-
-/* Sets the background color to any non-selected 
- * element of the quick command menu to transparent */
- #modal-bg *:not([data-selected]) {
-     background-color: rgba(0,0,0,0)!important;
- }
-
-#browser:not(.fullscreen) #tabs-container {
-    position: absolute;
-    top: 34px;
-    left: 0;
-    right: 0;
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
+    flex: 0 0 16px;
+    min-width: 16px;
+    height: 16px;
     padding: 0;
 }
 
-#browser:not(.fullscreen) .toolbar-tabbar .newtab > button svg {
+#browser:not(.fullscreen):not(.is-settingspage)  .tab-position .tab .favicon, .tab-position .tab .close {
+    min-width: 16px;
+    min-height: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .tab-group-indicator {
+    top: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .tab .tab-indicator {
+    height: 6px;
+    border: 2px solid var(--colorAccentBg);
+    cursor: pointer;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .tab .tab-indicator.active {
+    background-color: var(--colorAccentBgAlpha);
+    border: 0;
+    border-bottom: 1px solid var(--colorAccentBorder);
+}
+
+#browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-indicator:first-of-type,
+#browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-indicator:first-of-type {
+    margin: 0;
+    border-left: 1px solid var(--colorAccentBorder);
+}
+
+#browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-indicator:last-of-type,
+#browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-indicator:last-of-type {
+    margin: 0;
+    border-right: 1px solid var(--colorAccentBorder);
+}
+
+#browser:not(.fullscreen):not(.is-settingspage).tabs-top .tab-position .tab,
+#browser:not(.fullscreen):not(.is-settingspage).tabs-bottom .tab-position .tab {
+    margin-right: 0;
+}
+
+/*
+    toolbar
+*/
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar.toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 78px);
+    justify-content: flex-end;
+    padding-right: 1px;
+    -webkit-app-region: drag;
+    background-color: var(--colorAccentBg);
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar:after {
+    display: none;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar.toolbar .button-toolbar svg,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-tabbar > .button-toolbar > button,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-tabbar > .toolbar-group > .button-toolbar > button {
     fill: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen) .mac #tabs-container.top {
-    padding-left: 0;
-}
-
-#browser:not(.fullscreen).theme-light .tab-position .tab {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button:hover,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button:active,
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar.toolbar .ExtensionIcon--Hidden {
     background-color: var(--colorAccentBgDark);
 }
 
-#browser:not(.fullscreen).theme-light .tab-position .tab.active {
-    background-color: var(--colorAccentBgFaded);
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField {
+    position: absolute;
+    min-width: 600px;
+    left: 50%;
+    margin-left: -340px;
+    background-color: var(--colorAccentBorder);
+    border: 1px solid var(--colorAccentBgFadedMore);
+    border-radius: var(--radius);
+    height: 26px;
 }
 
-#browser:not(.fullscreen) .tab-position .tab .tab-header {
-    border-bottom: 1px solid var(--colorBorder);
-}
-
-#browser:not(.fullscreen) .tab-position .tab .close svg {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton-SecurityBadge {
     fill: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen).theme-light .tab-position .tab:hover:not(.active) {
-    background-color: var(--colorFgAlpha);
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.secure {
+    fill: var(--colorAccentFg);
+    background-color: var(--colorAccentBgDarker);
 }
 
-#browser:not(.fullscreen).theme-light .tab-position .tab:not(.active) .tab-header .title {
-    color: var(--colorAccentFgFaded);
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton.certified {
+    fill: #fff;
+    color: #fff;
+    background-color: #31bc31;
 }
 
-#browser:not(.fullscreen).theme-light .tab-position .tab:hover:not(.active) .tab-header .title {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .SiteInfoButton .siteinfo-text {
+    padding-left: 2px;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField:not(:focus) {
+    justify-content: center;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField input {
     color: var(--colorAccentFg);
 }
 
-/* .theme-light .addressfield, .theme-light .searchfield {
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    background-color: rgba(255, 255, 255, 0.4);
-} */
-
-#browser:not(.fullscreen).isblurred .tab-strip, #browser:not(.fullscreen).isblurred .toolbar-tabbar > .button-toolbar.toggle-trash {
-    background: var(--colorAccentBgDark);
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField input::selection {
+    color: var(--colorHighlightFg);
+    background-color: var(--colorHighlightBg);
 }
 
-#browser:not(.fullscreen) .tab-strip, #browser:not(.fullscreen) .toolbar-tabbar > .button-toolbar.toggle-trash {
-    background: var(--colorAccentBorderDark);
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .SearchField:focus-within,
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField:focus-within {
+    box-shadow: 0 0 0 1px var(--colorAccentBgFadedMost) inset;
+    border-color: var(--colorAccentBgFadedMost);
+    background-color: var(--colorAccentBgDark);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar.toggle-trash > button svg, .button-toolbar > button img, .SiteInfoButton.secure {
-    fill: var(--colorAccentFgFaded);
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper {
+    color: var(--colorAccentFgAlpha);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) #panels .button-toolbar > button svg,
-#browser:not(.fullscreen):not(.is-settingspage) .find-in-page.toolbar .button-toolbar > button svg {
-    fill: var(--colorFg);
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper--ShouldHighlight {
+    --HighlightColor: var(--colorAccentFg);
+    --LowlightColor: var(--colorAccentFgFaded);
 }
 
-#browser:not(.fullscreen) .tab-group-indicator {
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-droptarget {
+    position: absolute;
+    width: 90px;
+    left: 50%;
+    margin-left: calc(-78px - 368px);
+    background-color: var(--colorAccentBg);
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar .profile-popup {
+    float: right;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button.button-pressed {
+    background-color: var(--colorAccentBgDarker);
+    background-image: none;
+}
+
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar .toolbar-extensions {
+    position: absolute;
+    min-width: 126px;
+    lefT: 50%;
+    margin-left: calc(78px + 192px);
+    background-color: var(--colorAccentBg);
+}
+
+.toolbar .profile-popup + .toolbar-extensions .button-toolbar:not(.button-narrow):first-of-type:before {
+    display: none;
     top: 0;
-    padding: 0;
+    left: -4px;
+    height: 34px;
+    background: var(--colorAccentFgAlpha);
+    opacity: 0.6;
 }
 
-#browser:not(.fullscreen) .tab-indicator {
-    height: 2px;
-    cursor: pointer;
-    border: 0;
-    border-bottom: 1px solid var(--colorAccentBg);
+#browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-droptarget .button-toolbar:not(.button-narrow):last-of-type:before {
+    content: '';
+    position: absolute;
+    display: none;
+    top: 0;
+    right: -4px;
+    width: 1px;
+    height: 34px;
+    border-radius: 100%;
+    background: var(--colorAccentFgAlpha);
+    
 }
 
-#browser:not(.fullscreen) .tab-indicator.active {
-    height: 3px;
-    border: 0;
-    border-bottom: 2px solid var(--colorAccentBg);
+/*
+    main
+*/
+#browser:not(.fullscreen):not(.is-settingspage) #main {
+    margin-top: 68px;
 }
+/* FIXED END */
 
-#browser:not(.fullscreen).tabs-top .tab-position .tab {
-    border-radius: 0;
-}
 
-#browser:not(.fullscreen) .tab-position .tab .tab-header {
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-}
-
-#browser:not(.fullscreen) .color-behind-tabs-on .tab.active .tab-indicator.active {
-    background-color: var(--colorAccentBgFadedMost);
-}
-
-#browser:not(.fullscreen) .color-behind-tabs-off .tab.active .tab-indicator.active {
-    background-color: var(--colorAccentBgFadedMost);
-}
-
-#browser:not(.fullscreen) input[type=button][type=submit]:hover:not([disabled]),
-#browser:not(.fullscreen) input[type=submit][type=submit]:hover:not([disabled]),
-#browser:not(.fullscreen) input[type=color][type=submit]:hover:not([disabled]),
-#browser:not(.fullscreen) .webpage-button[type=submit]:hover:not([disabled]),
-#browser:not(.fullscreen) input[type=button].primary:hover:not([disabled]),
-#browser:not(.fullscreen) input[type=submit].primary:hover:not([disabled]),
-#browser:not(.fullscreen) input[type=color].primary:hover:not([disabled]),
-#browser:not(.fullscreen) .webpage-button.primary:hover:not([disabled]) {
-    color: var(--colorHighlightBgDark);
-}
+/*
+    fix/3.3 → Remove custom caption spacing
+*/
+/* #browser.mac .window-buttongroup {
+    margin-top: 10px
+} */
+/* end COLORS!!! */
 
 .startpage {
     background-color: #f6f6f6 !important;
@@ -310,25 +377,28 @@ button.button-startpage:after {
     background-color: transparent;
 }
 
-.right#panels-container:not(.overlay) button.fullheight.alternate {
+/*
+    fix/3.3 → change .fullheight to .SlideBar--FullHeight
+*/
+.right#panels-container:not(.overlay) button.SlideBar--FullHeight.alternate {
     min-width: 28px;
     box-shadow: -12px 0 10px -8px rgb(0, 0, 0, 0.1);
     left: 0;
 }
 
-.right#panels-container:not(.overlay) button.fullheight.alternate:active,
-.right#panels-container:not(.overlay) button.fullheight.alternate.touch-active {
+.right#panels-container:not(.overlay) button.SlideBar--FullHeight.alternate:active,
+.right#panels-container:not(.overlay) button.SlideBar--FullHeight.alternate.touch-active {
     left: 0;
 }
 
-.left#panels-container:not(.overlay) button.fullheight {
+.left#panels-container:not(.overlay) button.SlideBar--FullHeight {
     min-width: 28px;
     box-shadow: 12px 0 10px -8px rgb(0, 0, 0, 0.1);
     right: 0;
 }
 
-.left#panels-container:not(.overlay) button.fullheight:active,
-.left#panels-container:not(.overlay) button.fullheight.touch-active {
+.left#panels-container:not(.overlay) button.SlideBar--FullHeight:active,
+.left#panels-container:not(.overlay) button.SlideBar--FullHeight.touch-active {
     right: 0;
 }
 /*fixed panel stack style*/
@@ -362,7 +432,7 @@ button.button-startpage:after {
     background-color: transparent;
 }
 
-#browser:not(.fullscreen).mac .toolbar-statusbar {
+#browser:not(.fullscreen):not(.is-settingspage).mac .toolbar-statusbar {
     position: absolute;
     width: 50%;
     min-width: 480px;
@@ -377,95 +447,136 @@ button.button-startpage:after {
     box-shadow: 0 8px 25px -10px rgba(0,0,0,0.2);
 }
 
-#browser:not(.fullscreen).mac.theme-dark .toolbar-statusbar {
+#browser:not(.fullscreen):not(.is-settingspage).mac.theme-dark .toolbar-statusbar {
     background: var(--colorBgAlpha);
 }
 
 @media (max-width: 1200px) {
-    #browser:not(.fullscreen) .addressfield {
+    #browser:not(.fullscreen):not(.is-settingspage) .addressfield {
         max-width: 460px;
     }
 }
 
 @media (max-width: 960px) {
-    #browser:not(.fullscreen) .addressfield {
+    #browser:not(.fullscreen):not(.is-settingspage) .addressfield {
         max-width: 340px;
     }
 }
 
 @media (max-width: 840px) {
-    #browser:not(.fullscreen) .addressfield {
+    #browser:not(.fullscreen):not(.is-settingspage) .addressfield {
         max-width: 240px;
     }
 }
 
 @media (max-width: 700px) {
-    #browser:not(.fullscreen) .toolbar.toolbar-addressbar.toolbar-mainbar {
+    #browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-addressbar.toolbar-mainbar {
         justify-content: flex-end;
     }
 }
 
 @media (max-width: 620px) {
-    #browser:not(.fullscreen) .toolbar.toolbar-mainbar.toolbar-extensions {
+    #browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-mainbar.toolbar-extensions {
         display: none;
     }
 }
 
 /* fancy experiments */
-#browser:not(.fullscreen):not(.is-settingspage) .addressfield {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .addressfield {
     background-color: transparent;
     border: 0;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .addressfield:focus-within {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .addressfield:focus-within {
     background: var(--colorAccentBg);
     color: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField {
+/*
+    fix/3.3 → remove custom addressfield text color and justification
+*/
+/* #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-UrlField {
     color: var(--colorAccentFg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-UrlField:not(:focus) {
     text-align: center;
-}
+} */
 
-#browser:not(.fullscreen):not(.is-settingspage) .button-toolbar > button svg,
+/*
+    fix/3.3 → remove custom accent colors for icons
+*/
+/* #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .button-toolbar > button svg,
 .button-toolbar > button img,
 .SiteInfoButton.secure,
 button.button-addressfield svg {
     fill: var(--colorAccentFg);
-}
+} */
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button {
     margin-top: 1px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed, .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
     background-color: var(--colorAccentBgDark);
     border-color: var(--colorAccentBorderDark);
     color: var(--colorFg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button svg:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button svg:first-child, .toolbar-mainbar > .button-toolbar > button img:first-child, .toolbar-mainbar > .toolbar-group > .button-toolbar > button img:first-child {
     flex: 0 0 22px;
     height: 22px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar.profile-popup > button img:first-child {
     flex: 0 0 20px;
     height: 20px;
     width: 20px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .toolbar-mainbar > .button-toolbar > button, .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
     min-width: 30px;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage) .tab-position .tab .favicon {
-    background: rgba(255, 255, 255, 0.45);
+/* 
+    fix/3.3 → Re-remove favicon background
+*/
+/* #browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .tab-position .tab .favicon {
+    background: rgba(255, 255, 255, 0.2);
+} */
+
+#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
+    filter: none;
 }
 
-#browser:not(.fullscreen):not(.is-settingspage).theme-dark .tab-position .tab.active .tab-header .favicon {
-    filter: none;
+/*
+    Omnibox drop-down translucency
+    by u/EuhCertes
+    https://www.reddit.com/r/vivaldibrowser/comments/fw644t/translucency_effects_in_vivaldi/
+*/
+.OmniDropdown
+{
+    background: var(--colorBgAlpha);
+    backdrop-filter: blur(15px);
+}
+
+/* Quick command menu translucency */
+#modal-bg
+{
+    background-color: var(--colorBgAlpha);
+    backdrop-filter: blur(15px);
+}
+
+/* Sets the background color to any non-selected 
+ * element of the quick command menu to transparent */
+#modal-bg *:not([data-selected])
+{
+    background-color: rgba(0,0,0,0)!important;
+}
+
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+    border: 0;
+    background-color: var(--colorHighlightBg);
+    fill: var(--colorHighlightFg);
+    color: var(--colorHighlightFg);
 }
