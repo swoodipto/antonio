@@ -9,12 +9,17 @@
 /*
     fix/3.3 → COLORS!!!
 */
-#browser.isblurred.dim-blurred {
+#browser:not(.fullscreen):not(.is-settingspage).isblurred.dim-blurred {
     --colorAccentBg: var(--colorAccentBgFaded);
     --colorAccentBgDark: var(--colorAccentBgFadedMost);
     --colorAccentBgDarker: var(--colorAccentBorderDark);
 }
 
+#browser:not(.fullscreen):not(.is-settingspage).theme-dark {
+    --colorAccentBg: var(--colorAccentBgDarker);
+    --colorAccentBorder: var(--colorAccentFadedMost);
+    --colorAccentBgAlpha: var(--colorAccentBgAlphaHeavy);
+}
 
 /*
     FIXED
