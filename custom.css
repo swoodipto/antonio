@@ -211,20 +211,28 @@
     background-color: var(--colorHighlightBg);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .SearchField:focus-within,
-#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField:focus-within {
+#browser:not(.fullscreen):not(.is-settingspage) .SearchField:focus-within,
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField:focus-within {
     box-shadow: 0 0 0 1px var(--colorAccentBgFadedMost) inset;
     border-color: var(--colorAccentBgFadedMost);
     background-color: var(--colorAccentBgDark);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper {
     color: var(--colorAccentFgAlpha);
 }
 
-#browser:not(.fullscreen):not(.is-settingspage):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper--ShouldHighlight {
+#browser:not(.fullscreen):not(.is-settingspage) .UrlBar-AddressField .UrlField .UrlFragment-Wrapper--ShouldHighlight {
     --HighlightColor: var(--colorAccentFg);
     --LowlightColor: var(--colorAccentFgFaded);
+}
+
+#browser:not(.fullscreen) .UrlBar-AddressField .pageload {
+    color: var(--colorAccentFg);
+}
+
+#browser:not(.fullscreen) .UrlBar-AddressField .pageload .pageload-ticker {
+    border-color: var(--colorAccentFgAlpha);
 }
 
 #browser:not(.fullscreen):not(.is-settingspage) .toolbar.toolbar-droptarget {
