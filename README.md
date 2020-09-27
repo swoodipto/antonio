@@ -51,10 +51,15 @@ Read the story behind this Mod [on my Blog](https://wp.me/padUp4-Bw).
 
 ## 🌟 Changelog:
 
-### [v1.0](https://github.com/otpidusprime/antonio/releases/tag/v1.0)
+### [v1.2](https://github.com/otpidusprime/antonio/releases/tag/v1.2)
 
-- Initial release
+- Fixed Private mode Urlbar
+- Added dark mode color shift
 
 ### [v1.1](https://github.com/otpidusprime/antonio/releases/tag/v1.1)
 
 - Fixed Vivaldi 3.3 compatibility (#1)
+
+### [v1.0](https://github.com/otpidusprime/antonio/releases/tag/v1.0)
+
+- Initial release
