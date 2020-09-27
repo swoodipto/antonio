@@ -149,6 +149,7 @@
     top: 0;
     right: 0;
     width: calc(100% - 78px);
+    height: 34px;
     justify-content: flex-end;
     padding-right: 1px;
     -webkit-app-region: drag;
